@@ -1,41 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>SBS</title>
-
-	<link rel="stylesheet" 
-	 href="<?php bloginfo('template_url'); ?>/estilo.css">
-
-</head>
-<body>
-
-
-	<body background="<?php bloginfo('template_url'); ?>/h1.jpg">
-
-	<header>
-		<center>
-		<br>
-		<br>
-
-		
-
-		<img src="<?php bloginfo('template_url'); ?>/logo1.png" width="150">
-		<h1><?php bloginfo('description'); ?></h1>
-		<br>
-		<ul>
-			<br>
-			<li>Inicio</li>
-			<li>Noticias</li>
-			<li>Deportes</li>
-			<li>En Vivo</li>
-		</ul>
-	    </center>
-	</header>
+<? php get_heater(); ?>
 
 	<section>
-		<center>
 
 	<?php $articulos=new WP_Query([
 		             'showpost'=>1
@@ -44,38 +9,26 @@
 		$articulos->the_post(); ?>
 
 
-
-
-
 		
-		
-			<?php the_post_thumbnail("medium"); ?>
-			<h3><?php the_title(); ?></h3>
+		<div class="row caja">
+			<div class="col-sm-3">
+			<?php the_post_thumbnail("thumbnail"); ?>
+		    </div>
+		    <div class="col-sm-9">
+			<h3><a href="<?php the_permalink(); ?>"> 
+			<?php the_title(); ?></a></h3>
+			<p>Publicado por <?php the_author(); ?> el <?php the_time("d/m/Y"); ?></p>
 			<?php the_excerpt(); ?>
-			
-			
-
-
-
-
+		    </div>
+		</div>	
 
 	    <?php } ?>
 
 		
-	</center>
+	
 	</section>
 
-	<footer>
-		<center>
-		<ul>
-			<br>
-			<br>
-			<li>Facebook</li>
-			<li>Whatsapp</li>
-			<li>Pinterest</li>
-			<li>Youtube</li>
-		</ul>
-	</center>
-	</footer>
+<? php get_footer(); ?>
+
 </body>
 </html>
