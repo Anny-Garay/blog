@@ -1,5 +1,5 @@
 <footer>
-		<center>
+	<center>
 		
 			<a href="" class"#">Facebook</a>
 			<a href="" class"#">Whatsapp</a>
@@ -7,4 +7,9 @@
 			<a href="" class"#">Pinterest</a>
 		
 	</center>
-	</footer>
+</footer>
+
+<?php wp_footer(); ?>
+
+</body>
+</html>

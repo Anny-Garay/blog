@@ -1,4 +1,4 @@
-<? php get_heater(); ?>
+<?php get_header(); ?>
 
 	<section>
 
@@ -28,7 +28,7 @@
 	
 	</section>
 
-<? php get_footer(); ?>
+<?php get_footer(); ?>
 
 </body>
 </html>
