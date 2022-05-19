@@ -3,7 +3,9 @@
 	<section>
 
 	<?php $articulos=new WP_Query([
-		             'showpost'=>1
+		             'showpost'=>3,
+		             'post_type' => 'empleos'
+
 	                 ]);
 	while ($articulos->have_posts()) {
 		$articulos->the_post(); ?>
